@@ -17,29 +17,35 @@
 #define COLOR_DEFAULT "\033[0m"
 #define COLOR_RED "\033[31m"
 #define COLOR_GREEN "\033[32m"
+#define COLOR_YELLOW "\033[33m"
 
 class ClapTrap {
 
 public:
 
-	ClapTrap();
-	ClapTrap(int n);
+	ClapTrap(std::string name);
+	ClapTrap &	operator=(ClapTrap const & rhs);
 	ClapTrap(ClapTrap const & src);
 	~ClapTrap();
 
-	ClapTrap &			operator=( ClapTrap const & rhs );
-	void				setFoo(int value);
-	int 				getFoo() const;
+	void attack(const std::string & target);
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
+
 	void				setName(std::string name);
 	std::string	const & getName() const;
 
 private:
 
-	int 				_foo;
 	std::string			_name;
+	unsigned int		_hitPoints;
+	unsigned int		_energyPoints;
+	unsigned int		_attackDamage;
+
+	static unsigned int const _initHitPoints = 10;
+	static unsigned int const _initEnergyPoints = 10;
+	static unsigned int const _initAttackDamage = 0;
 
 };
-
-std::ostream &		operator<<( std::ostream & o, ClapTrap const & i );
 
 #endif

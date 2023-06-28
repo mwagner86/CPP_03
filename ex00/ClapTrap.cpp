@@ -14,30 +14,37 @@
 
 #include <iostream>
 
-ClapTrap::ClapTrap() {
-	std::cout << "Default Constructor called" << std::endl;
-	this->_foo = 0;
-}
-ClapTrap::ClapTrap(int n) {
-	std::cout << "Parametric Constructor called" << std::endl;
-	this->_foo = n;
+ClapTrap::ClapTrap(std::string name) :	_name(name),
+										_hitPoints(_initHitPoints),
+										_energyPoints(_initEnergyPoints),
+										_attackDamage(_initAttackDamage) {
+	std::cout << "Constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap const &src) : _foo() {
+ClapTrap::ClapTrap(ClapTrap const &src) {
+	this->_name = src._name;
+	this->_hitPoints = src._hitPoints;
+	this->_energyPoints = src._energyPoints;
+	this->_attackDamage = src._attackDamage;
 	std::cout << "Copy constructor called" << std::endl;
-	*this = src;
+}
+
+ClapTrap &	ClapTrap::operator=(ClapTrap const &rhs) {
+
+	if ( this != &rhs ) {
+		this->_name = rhs._name;
+		this->_hitPoints = rhs._hitPoints;
+		this->_energyPoints = rhs._energyPoints;
+		this->_attackDamage = rhs._attackDamage;
+	}
+	std::cout << "Assignment operator overload called" << std::endl;
+	return *this;
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << "Destructor called" << std::endl;
-}
-
-void	ClapTrap::setFoo(int n) {
-	this->_foo = n;
-}
-
-int			ClapTrap::getFoo() const {
-	return this->_foo;
+	std::cout << "ClapTrap " << COLOR_RED << this->_name
+				<< COLOR_DEFAULT << " was destroyed"
+				<< std::endl;
 }
 
 void	ClapTrap::setName(std::string name) {
@@ -46,17 +53,4 @@ void	ClapTrap::setName(std::string name) {
 
 std::string const & ClapTrap::getName() const {
 	return (this->_name);
-}
-
-
-ClapTrap &	ClapTrap::operator=(ClapTrap const &rhs) {
-	std::cout << "Assignment operator overload called" << std::endl;
-	if ( this != &rhs )
-		this->_foo = rhs.getFoo();
-	return *this;
-}
-
-std::ostream &	operator<<( std::ostream & o, ClapTrap const & i ) {
-	o << "The value of _foo is : " << i.getFoo();
-	return o;
 }
