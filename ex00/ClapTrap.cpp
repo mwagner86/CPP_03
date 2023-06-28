@@ -10,53 +10,53 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "TemplateClass.hpp"
+#include "ClapTrap.hpp"
 
 #include <iostream>
 
-Template::Template() {
+ClapTrap::ClapTrap() {
 	std::cout << "Default Constructor called" << std::endl;
 	this->_foo = 0;
 }
-Template::Template(int n) {
+ClapTrap::ClapTrap(int n) {
 	std::cout << "Parametric Constructor called" << std::endl;
 	this->_foo = n;
 }
 
-Template::Template(Template const &src) : _foo() {
+ClapTrap::ClapTrap(ClapTrap const &src) : _foo() {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
 }
 
-Template::~Template() {
+ClapTrap::~ClapTrap() {
 	std::cout << "Destructor called" << std::endl;
 }
 
-void	Template::setFoo(int n) {
+void	ClapTrap::setFoo(int n) {
 	this->_foo = n;
 }
 
-int			Template::getFoo() const {
+int			ClapTrap::getFoo() const {
 	return this->_foo;
 }
 
-void	Template::setName(std::string name) {
+void	ClapTrap::setName(std::string name) {
 	this->_name = name;
 }
 
-std::string const & Template::getName() const {
+std::string const & ClapTrap::getName() const {
 	return (this->_name);
 }
 
 
-Template &	Template::operator=(Template const &rhs) {
+ClapTrap &	ClapTrap::operator=(ClapTrap const &rhs) {
 	std::cout << "Assignment operator overload called" << std::endl;
 	if ( this != &rhs )
 		this->_foo = rhs.getFoo();
 	return *this;
 }
 
-std::ostream &	operator<<( std::ostream & o, Template const & i ) {
+std::ostream &	operator<<( std::ostream & o, ClapTrap const & i ) {
 	o << "The value of _foo is : " << i.getFoo();
 	return o;
 }

@@ -10,28 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEMPLATE_CLASS_H
-# define TEMPLATE_CLASS_H
+#ifndef EX00_CLAP_TRAP_H
+# define EX00_CLAP_TRAP_H
 
 #include <iostream>
 #define COLOR_DEFAULT "\033[0m"
 #define COLOR_RED "\033[31m"
 #define COLOR_GREEN "\033[32m"
 
-class Template {
+class ClapTrap {
 
 public:
 
-	Template();
-	Template(int n);
-	Template(Template const & src);
-	~Template();
+	ClapTrap();
+	ClapTrap(int n);
+	ClapTrap(ClapTrap const & src);
+	~ClapTrap();
 
-	Template &			operator=( Template const & rhs );
+	ClapTrap &			operator=( ClapTrap const & rhs );
 	void				setFoo(int value);
-	int 				getFoo(void) const;
+	int 				getFoo() const;
 	void				setName(std::string name);
-	std::string	const & getName(void) const;
+	std::string	const & getName() const;
 
 private:
 
@@ -40,6 +40,6 @@ private:
 
 };
 
-std::ostream &		operator<<( std::ostream & o, Template const & i );
+std::ostream &		operator<<( std::ostream & o, ClapTrap const & i );
 
 #endif
