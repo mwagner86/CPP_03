@@ -1,6 +1,14 @@
-//
-// Created by max on 6/29/23.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mwagner <mwagner@student.42wolfsburg.de>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/29 22:45:43 by mwagner           #+#    #+#             */
+/*   Updated: 2023/06/29 22:50:09 by mwagner          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
@@ -54,6 +62,9 @@ std::string	DiamondTrap::getName(void) const {
 }
 
 void DiamondTrap::whoAmI() {
+	std::cout 	<< "DiamondTrap Name: " << COLOR_GREEN << getName() 
+				<<	COLOR_DEFAULT << " uses whoAmI() and tells the world who it is:"
+				<< std::endl;
 	std::cout << "DiamondTrap Name: " << COLOR_GREEN << getName() << COLOR_DEFAULT << std::endl;
 	std::cout << "ClapTrap Name: " << COLOR_GREEN << ClapTrap::getName() << COLOR_DEFAULT << std::endl;
 }
