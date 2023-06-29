@@ -11,8 +11,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	this->setHitPoints(100);
 	this->setEnergyPoints(100);
 	this->setAttackDamage(30);
-	std::cout << "ScavTrap Constructor called";
-	std::cout << std::endl;
+	std::cout << "Derived Class " << COLOR_GREEN << "FragTrap Constructor" << COLOR_DEFAULT << " called" << COLOR_DEFAULT << std::endl;
 }
 
 FragTrap::FragTrap(ScavTrap const & src) : ClapTrap(src)
@@ -21,7 +20,7 @@ FragTrap::FragTrap(ScavTrap const & src) : ClapTrap(src)
 	setHitPoints(src.getHitPoints());
 	setEnergyPoints(src.getEnergyPoints());
 	setAttackDamage(src.getAttackDamage());
-	std::cout << "Derived Class ScavTrap CopyConstructor called" <<	std::cout << std::endl;
+	std::cout << "Derived Class " << COLOR_GREEN << "FragTrap CopyConstructor" << COLOR_DEFAULT << " called" << COLOR_DEFAULT << std::endl;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &rhs) {
@@ -30,7 +29,7 @@ FragTrap &FragTrap::operator=(const FragTrap &rhs) {
 		setHitPoints(rhs.getHitPoints());
 		setEnergyPoints(rhs.getEnergyPoints());
 		setAttackDamage(rhs.getAttackDamage());
-		std::cout << "Derived Class FragTrap AssignmentOperator overload called" <<	std::cout << std::endl;
+		std::cout << "Derived Class " << COLOR_GREEN << "FragTrap Assignment Operator overload" << COLOR_DEFAULT << " called" << COLOR_DEFAULT << std::endl;
 	}
 	return *this;
 }

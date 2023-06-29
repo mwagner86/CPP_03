@@ -10,8 +10,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	this->setHitPoints(100);
 	this->setEnergyPoints(50);
 	this->setAttackDamage(20);
-	std::cout << "ScavTrap Constructor called";
-	std::cout << std::endl;
+	std::cout << "Derived Class " << COLOR_GREEN << "ScavTrap Constructor" << COLOR_DEFAULT << " called" << COLOR_DEFAULT << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const & src) : ClapTrap(src)
@@ -20,7 +19,7 @@ ScavTrap::ScavTrap(ScavTrap const & src) : ClapTrap(src)
 	setHitPoints(src.getHitPoints());
 	setEnergyPoints(src.getEnergyPoints());
 	setAttackDamage(src.getAttackDamage());
-	std::cout << "Derived Class ScavTrap CopyConstructor called" <<	std::cout << std::endl;
+	std::cout << "Derived Class " << COLOR_GREEN << "ScavTrap CopyConstructor" << COLOR_DEFAULT << " called" << COLOR_DEFAULT << std::endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &rhs) {
@@ -29,7 +28,7 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &rhs) {
 		setHitPoints(rhs.getHitPoints());
 		setEnergyPoints(rhs.getEnergyPoints());
 		setAttackDamage(rhs.getAttackDamage());
-		std::cout << "Derived Class ScavTrap AssignmentOperator overload called" <<	std::cout << std::endl;
+		std::cout << "Derived Class " << COLOR_GREEN << "ScavTrap Assignment Operator overload" << COLOR_DEFAULT << " called" << COLOR_DEFAULT << std::endl;
 	}
 	return *this;
 }
