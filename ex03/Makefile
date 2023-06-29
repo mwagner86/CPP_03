@@ -6,24 +6,24 @@
 #    By: mwagner <mwagner@student.42wolfsburg.de>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/20 13:58:26 by mwagner           #+#    #+#              #
-#    Updated: 2023/06/27 21:41:17 by mwagner          ###   ########.fr        #
+#    Updated: 2023/06/27 21:41:33 by mwagner          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 VAL 		:= valgrind -s --leak-check=full --show-leak-kinds=all
-RUN 		:= ./main
+RUN 		:= ./DiamondTraps
 
 GREEN 		:= \033[0;32m
 RED 		:= \033[0;31m
 RESET_COL 	:= \033[0m
 
-NAME 		:= main
+NAME 		:= DiamondTraps
 CC 			:= c++
 CFLAGS 		:= -Wall -Werror -Wextra -std=c++98
 SRC 		:=	main.cpp 		\
 				ClapTrap.cpp 	\
 				ScavTrap.cpp 	\
-				FragTrap.cpp 	\
+				FragTrap.cpp	\
 				DiamondTrap.cpp
 
 all: $(NAME)
