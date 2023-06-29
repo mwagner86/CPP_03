@@ -25,7 +25,7 @@ ClapTrap::ClapTrap(ClapTrap const &src) {
 	this->_hitPoints = src._hitPoints;
 	this->_energyPoints = src._energyPoints;
 	this->_attackDamage = src._attackDamage;
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap CopyConstructor called" << std::endl;
 }
 
 ClapTrap &	ClapTrap::operator=(ClapTrap const &rhs) {
@@ -36,7 +36,7 @@ ClapTrap &	ClapTrap::operator=(ClapTrap const &rhs) {
 		this->_energyPoints = rhs._energyPoints;
 		this->_attackDamage = rhs._attackDamage;
 	}
-	std::cout << "Assignment operator overload called" << std::endl;
+	std::cout << "ClapTrap AssignmentOperator overload called" << std::endl;
 	return *this;
 }
 
