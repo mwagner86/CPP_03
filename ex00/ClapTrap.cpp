@@ -18,7 +18,7 @@ ClapTrap::ClapTrap(std::string name) {
 	this->_hitPoints = 10;
 	this->_energyPoints = 10;
 	this->_attackDamage = 0;
-	std::cout << "ClapTrap Constructor called" << std::endl;
+	std::cout << "Base Class " << COLOR_GREEN << "ClapTrap Constructor" << COLOR_DEFAULT << " called" << COLOR_DEFAULT << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &src) {
@@ -26,7 +26,7 @@ ClapTrap::ClapTrap(ClapTrap const &src) {
 	this->_hitPoints = src._hitPoints;
 	this->_energyPoints = src._energyPoints;
 	this->_attackDamage = src._attackDamage;
-	std::cout << "ClapTrap CopyConstructor called" << std::endl;
+	std::cout << "Base Class " << COLOR_GREEN << "ClapTrap CopyConstructor" << COLOR_DEFAULT << " called" << COLOR_DEFAULT << std::endl;
 }
 
 ClapTrap &	ClapTrap::operator=(ClapTrap const &rhs) {
@@ -37,14 +37,14 @@ ClapTrap &	ClapTrap::operator=(ClapTrap const &rhs) {
 		this->_energyPoints = rhs._energyPoints;
 		this->_attackDamage = rhs._attackDamage;
 	}
-	std::cout << "ClapTrap AssignmentOperator overload called" << std::endl;
+	std::cout << "Base Class " << COLOR_GREEN << "ClapTrap Assignment Operator overload" << COLOR_DEFAULT << " called" << COLOR_DEFAULT << std::endl;
 	return *this;
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << "ClapTrap Destructor Called" << "\nClapTrap " << COLOR_RED << this->_name
-				<< COLOR_DEFAULT << " was destroyed"
-				<< std::endl;
+	std::cout << "BaseClass Destructor Called" << "\nClapTrap " << COLOR_RED << this->_name
+			  << COLOR_DEFAULT << " was destroyed"
+			  << std::endl;
 }
 
 void	ClapTrap::setName(std::string name) {
