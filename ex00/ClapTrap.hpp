@@ -14,6 +14,7 @@
 # define EX00_CLAP_TRAP_H
 
 #include <iostream>
+#include <string>
 #define COLOR_DEFAULT "\033[0m"
 #define COLOR_RED "\033[31m"
 #define COLOR_GREEN "\033[32m"
@@ -32,19 +33,24 @@ public:
 	void takeDamage(unsigned int amount);
 	void beRepaired(unsigned int amount);
 
+	void clap_stats() const;
+
+	// Setter and Getter functions for the private variables.
 	void				setName(std::string name);
 	std::string	const & getName() const;
+	void 				setHitPoints(unsigned int value);
+	int 				getHitPoints() const;
+	void				setEnergyPoints(unsigned int value);
+	int 				getEnergyPoints() const;
+	void 				setAttackDamage(unsigned int value);
+	int 				getAttackDamage() const;
 
 private:
 
-	std::string			_name;
-	unsigned int		_hitPoints;
-	unsigned int		_energyPoints;
-	unsigned int		_attackDamage;
-
-	static unsigned int const _initHitPoints = 10;
-	static unsigned int const _initEnergyPoints = 10;
-	static unsigned int const _initAttackDamage = 0;
+	std::string		_name;
+	unsigned int	_hitPoints;
+	unsigned int	_energyPoints;
+	unsigned int	_attackDamage;
 
 };
 
