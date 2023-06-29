@@ -48,7 +48,7 @@ void FragTrap::highFivesGuys() {
 		std::cout << "Unable to give high fives. No hit points left." << std::endl;
 		return;
 	}
-	std::cout << "FragTrap gives high fives to everyone!" << std::endl;
+	std::cout << "FragTrap "  << COLOR_RED << getName() << COLOR_DEFAULT << " gives high fives to everyone!" << std::endl;
 	setEnergyPoints(getEnergyPoints() - 1);
 }
 
