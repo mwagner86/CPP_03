@@ -39,11 +39,11 @@ public:
 	void				setName(std::string name);
 	std::string	const & getName() const;
 	void 				setHitPoints(unsigned int value);
-	int 				getHitPoints() const;
+	unsigned int 		getHitPoints() const;
 	void				setEnergyPoints(unsigned int value);
-	int 				getEnergyPoints() const;
+	unsigned int 		getEnergyPoints() const;
 	void 				setAttackDamage(unsigned int value);
-	int 				getAttackDamage() const;
+	unsigned int 		getAttackDamage() const;
 
 private:
 

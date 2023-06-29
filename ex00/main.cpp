@@ -16,8 +16,7 @@
 
 int main() {
 
-
-/*	std::cout << "\nFreshly initialized ClapTrap Objects:" << std::endl;
+	std::cout << "\nFreshly initialized ClapTrap Objects:" << std::endl;
 	ClapTrap clapTrapA("Handsome Jack Imposter");
 	clapTrapA.clap_stats();
 	ClapTrap clapTrapB ("Wannabe Vault Hunter");
@@ -36,7 +35,7 @@ int main() {
 	clapTrapC.setHitPoints(20);
 	clapTrapC.setEnergyPoints(15);
 	clapTrapC.setAttackDamage(5);
-	clapTrapC.clap_stats();*/
+	clapTrapC.clap_stats();
 
 	ClapTrap clapTrap1("CL4P-TP");
 	ClapTrap clapTrap2("3V1L-TP");
