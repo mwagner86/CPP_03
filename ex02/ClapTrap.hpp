@@ -43,7 +43,7 @@ public:
 	void 				setAttackDamage(unsigned int value);
 	unsigned int 		getAttackDamage() const;
 
-private:
+protected:
 
 	std::string		_name;
 	unsigned int	_hitPoints;
